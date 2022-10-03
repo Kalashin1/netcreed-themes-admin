@@ -4,13 +4,7 @@ import {
   Route
 } from 'react-router-dom';
 
-import Index from "./pages/Index";
-import Category from './pages/Category';
-import ProductPage from './pages/Product-Page';
-import Checkout from './pages/Checkout';
-import Cart from './pages/Cart';
-import Tracking from './pages/Tracking';
-import Contact from './pages/Contact';
+import Index from './pages/Index';
 
 
 
@@ -19,12 +13,6 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route index element={(<Index />)} />
-        <Route path='/shop' element={(<Category />)} />
-        <Route path='/product' element={(<ProductPage />)} />
-        <Route path='/checkout' element={(<Checkout />)} /> 
-        <Route path='/cart' element={(<Cart />)} />
-        <Route path='/tracking' element={(<Tracking />)} />
-        <Route path='/contact' element={(<Contact />)} />
       </Routes>
     </BrowserRouter>
   )
