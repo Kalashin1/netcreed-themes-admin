@@ -1,3 +1,11 @@
+import Select from 'react-select'
+
+const options = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'vanilla', label: 'Vanilla' }
+]
+
 const CreateTemplateForm = () => {
   return (
     <div className="card">
@@ -6,19 +14,42 @@ const CreateTemplateForm = () => {
       </div>
       <div className="card-body">
         <form>
+
           <div className="form-group">
-            <label>Default Input Text</label>
+            <label>Title</label>
             <input type="text" className="form-control" />
           </div>
-          <div className="section-title">Select 2</div>
+
           <div className="form-group">
-            <label>Select2</label>
-            <select className="form-control select2">
-              <option>Option 1</option>
-              <option>Option 2</option>
-              <option>Option 3</option>
-            </select>
+            <label>Price</label>
+            <input type="number" className="form-control" />
           </div>
+
+          <div>
+            <div className="section-title">Select Category</div>
+            <Select options={options} onChange={v => console.log(v)} />
+          </div>
+
+          <div>
+            <div className="section-title">Select Tags</div>
+            <Select options={options} isMulti onChange={v => console.log(v)} />
+          </div>
+
+          <div className="form-group">
+            <label>Cover Photo</label>
+            <input type="file" className="form-control" />
+          </div>
+          
+          <div className="form-group">
+            <label>Select Template</label>
+            <input type="file" className="form-control" />
+          </div>
+
+          <div className="form-group my-4">
+            <label>Description</label>
+            <textarea className="form-control"></textarea>
+          </div>
+
         </form>
       </div>
     </div>

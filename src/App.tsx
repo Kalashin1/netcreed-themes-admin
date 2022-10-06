@@ -11,9 +11,16 @@ import ForgotPassword from './pages/Forgot-Password';
 
 
 import Users from './pages/Users';
+import User from './pages/User'
+
+
 import Orders from './pages/Orders';
+import Order from './pages/Order';
+
 import Themes from './pages/Themes';
+import Theme from './pages/Theme';
 import CreateTemplate from './pages/Create-Template';
+
 
 
 const App = () => {
@@ -23,10 +30,17 @@ const App = () => {
         <Route index element={(<Login />)} />
         <Route path='/register' element={(<Register />)} />
         <Route path='/forgot-password' element={(<ForgotPassword />)} />
+
         <Route path='/dashboard' element={(<Index />)} />
+
         <Route path='/users' element={(<Users />)} />
+        <Route path='/user/:id' element={(<User />)} />
+
         <Route path='/orders' element={(<Orders />)} />
+        <Route path='/order/:id' element={(<Order />)} />
+
         <Route path='/themes' element={(<Themes />)} />
+        <Route path='/theme/:id' element={(<Theme />)} />
         <Route path='/create-template' element={(<CreateTemplate />)} />
       </Routes>
     </BrowserRouter>

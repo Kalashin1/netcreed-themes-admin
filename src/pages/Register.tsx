@@ -1,7 +1,7 @@
 import { FC } from "react";
 import RegisterForm from "../Components/Register-Form";
 
-const Register = () => {
+const Register: FC = () => {
   return (
     <div id="app">
       <section className="section">
