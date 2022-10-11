@@ -6,11 +6,18 @@ export interface ITheme {
   updatedAt: number;
   tags: string[];
   category: string;
-  image: string;
+  coverImage: {
+    url: string;
+    name: string;
+  };
   id: string;
   downloads: number;
   saves: number;
-  url: string
+  views: number;
+  template: {
+    url: string;
+    name: string;
+  };
   owner: {
     name: string;
     username: string;

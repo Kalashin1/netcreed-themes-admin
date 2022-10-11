@@ -1,6 +1,13 @@
 import Reviews from "./Reviews";
+import { ITheme } from "../types";
+import { FC } from "react";
 
-const ThemePage = () => {
+type Props = {
+  theme: ITheme
+}
+
+const ThemePage: FC<Props> = ({ theme }) => {
+  console.log(theme)
   return (
     <div className="card card-danger">
       <div className="card-header">
