@@ -42,6 +42,7 @@ const App = () => {
         <Route path='/themes' element={(<Themes />)} />
         <Route path='/theme/:id' element={(<Theme />)} />
         <Route path='/create-template' element={(<CreateTemplate />)} />
+
       </Routes>
     </BrowserRouter>
   )

@@ -8,9 +8,9 @@ const Navbar: FC = () => {
         <div className="form-inline mr-auto">
           <ul className="navbar-nav mr-3">
             <li><a href="#!" data-toggle="sidebar" className="nav-link nav-link-lg
-									collapse-btn"> <i data-feather="align-justify"></i></a></li>
+									collapse-btn"> <i className="fas fa-bars text-dark"></i></a></li>
             <li><a href="#!" className="nav-link nav-link-lg fullscreen-btn">
-                <i data-feather="maximize"></i>
+                <i className="fas fa-expand text-dark"></i>
               </a></li>
             <li>
               <form className="form-inline mr-auto">
@@ -26,7 +26,7 @@ const Navbar: FC = () => {
         </div>
         <ul className="navbar-nav navbar-right">
           <li className="dropdown dropdown-list-toggle"><a href="#!" data-toggle="dropdown"
-              className="nav-link nav-link-lg message-toggle"><i data-feather="mail"></i>
+              className="nav-link nav-link-lg message-toggle"><i className="fas fa-envelope"></i>
               <span className="badge headerBadge1">
                 6 </span> </a>
             <div className="dropdown-menu dropdown-list dropdown-menu-right pullDown">
@@ -87,7 +87,7 @@ const Navbar: FC = () => {
             </div>
           </li>
           <li className="dropdown dropdown-list-toggle"><a href="#!" data-toggle="dropdown"
-              className="nav-link notification-toggle nav-link-lg"><i data-feather="bell" className="bell"></i>
+              className="nav-link notification-toggle nav-link-lg"><i className="bell fas fa-bell"></i>
             </a>
             <div className="dropdown-menu dropdown-list dropdown-menu-right pullDown">
               <div className="dropdown-header">
@@ -136,7 +136,7 @@ const Navbar: FC = () => {
             </div>
           </li>
           <li className="dropdown"><a href="#!" data-toggle="dropdown"
-              className="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="src" src="/assets/img/user.png /"
+              className="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="src" src="/assets/img/user.png"
                 className="user-img-radious-style" /> <span className="d-sm-none d-lg-inline-block"></span></a>
             <div className="dropdown-menu dropdown-menu-right pullDown">
               <div className="dropdown-title">Hello Sarah Smith</div>

@@ -23,7 +23,7 @@ const Theme: FC = () => {
 
     getTheme();
 
-  }, [])
+  }, [id])
 
   return (
     <Layout>

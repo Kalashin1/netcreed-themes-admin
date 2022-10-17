@@ -61,10 +61,16 @@ const ThemesDataTable: FC<Props> = ({ themes }) => {
                   <td>{t.saves ?? 0}</td>
                   <td>
                     <button
-                      className="btn btn-warning"
+                      className="btn btn-warning mr-1"
                       onClick={e => navigate(`/theme/${t.id}`)}
                     >
-                      View
+                      <i className="fas fa-edit" />
+                    </button>
+                    <button
+                      className="btn btn-danger"
+                      onClick={e => console.log("hello")}
+                    >
+                      <i className="fas fa-trash" />
                     </button>
                   </td>
                 </tr>

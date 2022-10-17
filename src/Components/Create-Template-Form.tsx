@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router'
 import { db, storage } from '../firebase-settings'
 import { addDoc, collection } from '@firebase/firestore'
 import { uploadImage } from '../helper';
+import { ITheme } from '../types';
 
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
@@ -31,12 +32,17 @@ const CreateTemplateForm = () => {
       const { title, price, coverImage, template, description } = form as any;
 
 
-      const payload: Record<string, any> = {
+      const payload: Partial<ITheme> = {
         title: title.value,
         price: price.value,
         description: description.value,
         category: category!.value,
-        tags: tags.map(t => t.value)
+        tags: tags.map(t => t.value),
+        saves: 0,
+        views: 0,
+        downloads: 0,
+        owner: 'ADMIN',
+        createdAt: new Date().getTime()
       };
 
       const imageResponse = await uploadImage(coverImage, storage, 'template-photos');
